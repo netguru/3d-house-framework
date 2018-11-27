@@ -1,0 +1,9 @@
+//
+//  Common-Release.xcconfig
+//  VRHouseFramework
+//
+
+// Imports
+
+#include "Common-Base.xcconfig"
+#include "../../Carthage/Checkouts/xcconfigs/Configurations/Release.xcconfig"
