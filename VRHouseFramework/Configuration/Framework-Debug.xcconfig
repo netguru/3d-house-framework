@@ -1,0 +1,10 @@
+//
+//  Framework-Debug.xcconfig
+//  VRHouseFramework
+//
+
+// Imports
+
+#include "Framework-Base.xcconfig"
+#include "../../Carthage/Checkouts/xcconfigs/Platforms/iOS.xcconfig"
+#include "Pods/Target Support Files/Pods-VRHouseFramework/Pods-VRHouseFramework.debug.xcconfig"

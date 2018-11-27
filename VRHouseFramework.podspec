@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VRHouseFramework'
-  s.version          = '0.1.0'
+  s.version          = '0.1'
   s.summary          = 'An open-source OpenCV wrapper written in Objective-C'
   s.homepage         = 'https://github.com/netguru/3d-house-framework'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'VRHouseFramework/Classes/**/*'
-  s.dependency 'OpenCV'
+  s.static_framework = true
+  s.source_files = 'VRHouseFramework/Source Files/**/*'
+  s.dependency 'OpenCV2', '~> 4.0.0'
 end

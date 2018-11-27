@@ -4,7 +4,7 @@
 //
 
 @import XCTest;
-#import "OpenCV.h"
+#import <VRHouseFramework/OpenCV.h>
 
 @interface VRHouseFrameworkTests: XCTestCase
 

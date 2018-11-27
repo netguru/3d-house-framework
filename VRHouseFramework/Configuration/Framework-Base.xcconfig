@@ -1,0 +1,18 @@
+//
+//  Framework-Base.xcconfig
+//  VRHouseFramework
+//
+
+// Imports
+
+#include "../../Carthage/Checkouts/xcconfigs/Targets/Framework.xcconfig"
+
+// Bundle
+
+_BUNDLE_NAME = VRHouseFramework
+_BUNDLE_IDENTIFIER = co.netguru.internal.3dhouse.framework
+_BUNDLE_INFOPLIST_PATH = $(SRCROOT)/VRHouseFramework/Supporting Files/Framework-Info.plist
+
+// Compiler
+
+_COMPILER_HARD_MODE = NO

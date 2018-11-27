@@ -1,0 +1,20 @@
+//
+//  Common-Base.xcconfig
+//  VRHouseFramework
+//
+
+// Imports
+
+#include "../../Carthage/Checkouts/xcconfigs/Common/Common.xcconfig"
+
+// MARK: Build
+
+_BUILD_VERSION = 0.1
+
+// MARK: Deployment
+
+_DEPLOYMENT_TARGET_IOS = 9.0
+
+// MARK: LLVM compiler
+
+RUN_CLANG_STATIC_ANALYZER = NO

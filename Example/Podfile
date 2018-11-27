@@ -1,3 +1,0 @@
-target 'VRHouseFramework_Tests' do
-  pod 'VRHouseFramework', :path => '../'
-end

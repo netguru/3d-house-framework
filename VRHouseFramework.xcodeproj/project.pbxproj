@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		252EC471BD8F1AA6A92CFABB /* libPods-VRHouseFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF63231C5795B56A80F4EBD /* libPods-VRHouseFramework.a */; };
+		AEDF478921AD245B004B66AC /* VRHouseFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */; };
+		AEE941F421AD2553007F0F28 /* VRHouseFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEE941F521AD2553007F0F28 /* OpenCV.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941EE21AD2553007F0F28 /* OpenCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEE941F621AD2554007F0F28 /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEE941EF21AD2553007F0F28 /* OpenCV.mm */; };
+		AEE941F821AD2557007F0F28 /* VRHouseFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE941F121AD2553007F0F28 /* VRHouseFrameworkTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEDF478A21AD245B004B66AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEDF477621AD245B004B66AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEDF477E21AD245B004B66AC;
+			remoteInfo = VRHouseFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE74945921AD5B4600F5D98E /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
+		AE74945B21AD5BEC00F5D98E /* Common-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Base.xcconfig"; sourceTree = "<group>"; };
+		AE74945C21AD5BEC00F5D98E /* Common-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Debug.xcconfig"; sourceTree = "<group>"; };
+		AE74945D21AD5BEC00F5D98E /* Framework-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Framework-Debug.xcconfig"; sourceTree = "<group>"; };
+		AE74945E21AD5BEC00F5D98E /* Framework-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Framework-Release.xcconfig"; sourceTree = "<group>"; };
+		AE74945F21AD5BEC00F5D98E /* Framework-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Framework-Base.xcconfig"; sourceTree = "<group>"; };
+		AE74946021AD5BEC00F5D98E /* Tests-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Base.xcconfig"; sourceTree = "<group>"; };
+		AE74946121AD5BEC00F5D98E /* Tests-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Framework.xcconfig"; sourceTree = "<group>"; };
+		AE74946221AD5BEC00F5D98E /* Common-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Release.xcconfig"; sourceTree = "<group>"; };
+		AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VRHouseFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDF478821AD245B004B66AC /* VRHouseFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRHouseFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE941EA21AD2553007F0F28 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRHouseFramework.h; sourceTree = "<group>"; };
+		AEE941EE21AD2553007F0F28 /* OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCV.h; sourceTree = "<group>"; };
+		AEE941EF21AD2553007F0F28 /* OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCV.mm; sourceTree = "<group>"; };
+		AEE941F121AD2553007F0F28 /* VRHouseFrameworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRHouseFrameworkTests.m; sourceTree = "<group>"; };
+		C57A18F792DC3F4431AC1F96 /* Pods-VRHouseFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRHouseFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRHouseFramework/Pods-VRHouseFramework.release.xcconfig"; sourceTree = "<group>"; };
+		E2F8CB4D2C05E8F3DD93F792 /* Pods-VRHouseFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRHouseFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRHouseFramework/Pods-VRHouseFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		FDF63231C5795B56A80F4EBD /* libPods-VRHouseFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VRHouseFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEDF477C21AD245B004B66AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				252EC471BD8F1AA6A92CFABB /* libPods-VRHouseFramework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEDF478521AD245B004B66AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEDF478921AD245B004B66AC /* VRHouseFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29492F6B3B8ECAE148A743F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDF63231C5795B56A80F4EBD /* libPods-VRHouseFramework.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C2184F7E197C33C93DB50DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2F8CB4D2C05E8F3DD93F792 /* Pods-VRHouseFramework.debug.xcconfig */,
+				C57A18F792DC3F4431AC1F96 /* Pods-VRHouseFramework.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE74945A21AD5BEC00F5D98E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				AE74945B21AD5BEC00F5D98E /* Common-Base.xcconfig */,
+				AE74945C21AD5BEC00F5D98E /* Common-Debug.xcconfig */,
+				AE74946221AD5BEC00F5D98E /* Common-Release.xcconfig */,
+				AE74945F21AD5BEC00F5D98E /* Framework-Base.xcconfig */,
+				AE74945D21AD5BEC00F5D98E /* Framework-Debug.xcconfig */,
+				AE74945E21AD5BEC00F5D98E /* Framework-Release.xcconfig */,
+				AE74946021AD5BEC00F5D98E /* Tests-Base.xcconfig */,
+				AE74946121AD5BEC00F5D98E /* Tests-Framework.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		AEDF477521AD245B004B66AC = {
+			isa = PBXGroup;
+			children = (
+				AEDF478121AD245B004B66AC /* VRHouseFramework */,
+				AEDF478021AD245B004B66AC /* Products */,
+				9C2184F7E197C33C93DB50DE /* Pods */,
+				29492F6B3B8ECAE148A743F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEDF478021AD245B004B66AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */,
+				AEDF478821AD245B004B66AC /* VRHouseFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEDF478121AD245B004B66AC /* VRHouseFramework */ = {
+			isa = PBXGroup;
+			children = (
+				AEE941EC21AD2553007F0F28 /* Source Files */,
+				AE74945A21AD5BEC00F5D98E /* Configuration */,
+				AEE941E921AD2553007F0F28 /* Supporting Files */,
+				AEE941F021AD2553007F0F28 /* Unit Tests */,
+			);
+			path = VRHouseFramework;
+			sourceTree = "<group>";
+		};
+		AEE941E921AD2553007F0F28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE74945921AD5B4600F5D98E /* Framework-Info.plist */,
+				AEE941EA21AD2553007F0F28 /* Tests-Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEE941EC21AD2553007F0F28 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */,
+				AEE941EE21AD2553007F0F28 /* OpenCV.h */,
+				AEE941EF21AD2553007F0F28 /* OpenCV.mm */,
+			);
+			path = "Source Files";
+			sourceTree = "<group>";
+		};
+		AEE941F021AD2553007F0F28 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AEE941F121AD2553007F0F28 /* VRHouseFrameworkTests.m */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AEDF477A21AD245B004B66AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEE941F421AD2553007F0F28 /* VRHouseFramework.h in Headers */,
+				AEE941F521AD2553007F0F28 /* OpenCV.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AEDF477E21AD245B004B66AC /* VRHouseFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEDF479321AD245B004B66AC /* Build configuration list for PBXNativeTarget "VRHouseFramework" */;
+			buildPhases = (
+				A4BD420167C6DDDDFF80E622 /* [CP] Check Pods Manifest.lock */,
+				AEDF477A21AD245B004B66AC /* Headers */,
+				AEDF477B21AD245B004B66AC /* Sources */,
+				AEDF477C21AD245B004B66AC /* Frameworks */,
+				AEDF477D21AD245B004B66AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRHouseFramework;
+			productName = VRHouseFramework;
+			productReference = AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEDF478721AD245B004B66AC /* VRHouseFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEDF479621AD245B004B66AC /* Build configuration list for PBXNativeTarget "VRHouseFrameworkTests" */;
+			buildPhases = (
+				AEDF478421AD245B004B66AC /* Sources */,
+				AEDF478521AD245B004B66AC /* Frameworks */,
+				AEDF478621AD245B004B66AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEDF478B21AD245B004B66AC /* PBXTargetDependency */,
+			);
+			name = VRHouseFrameworkTests;
+			productName = VRHouseFrameworkTests;
+			productReference = AEDF478821AD245B004B66AC /* VRHouseFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEDF477621AD245B004B66AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					AEDF477E21AD245B004B66AC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AEDF478721AD245B004B66AC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = AEDF477921AD245B004B66AC /* Build configuration list for PBXProject "VRHouseFramework" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AEDF477521AD245B004B66AC;
+			productRefGroup = AEDF478021AD245B004B66AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEDF477E21AD245B004B66AC /* VRHouseFramework */,
+				AEDF478721AD245B004B66AC /* VRHouseFrameworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEDF477D21AD245B004B66AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEDF478621AD245B004B66AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4BD420167C6DDDDFF80E622 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VRHouseFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEDF477B21AD245B004B66AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEE941F621AD2554007F0F28 /* OpenCV.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEDF478421AD245B004B66AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEE941F821AD2557007F0F28 /* VRHouseFrameworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEDF478B21AD245B004B66AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEDF477E21AD245B004B66AC /* VRHouseFramework */;
+			targetProxy = AEDF478A21AD245B004B66AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AEDF479121AD245B004B66AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74945B21AD5BEC00F5D98E /* Common-Base.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		AEDF479221AD245B004B66AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74946221AD5BEC00F5D98E /* Common-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		AEDF479421AD245B004B66AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74945D21AD5BEC00F5D98E /* Framework-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		AEDF479521AD245B004B66AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74945E21AD5BEC00F5D98E /* Framework-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		AEDF479721AD245B004B66AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74946121AD5BEC00F5D98E /* Tests-Framework.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		AEDF479821AD245B004B66AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74946121AD5BEC00F5D98E /* Tests-Framework.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEDF477921AD245B004B66AC /* Build configuration list for PBXProject "VRHouseFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEDF479121AD245B004B66AC /* Debug */,
+				AEDF479221AD245B004B66AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEDF479321AD245B004B66AC /* Build configuration list for PBXNativeTarget "VRHouseFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEDF479421AD245B004B66AC /* Debug */,
+				AEDF479521AD245B004B66AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEDF479621AD245B004B66AC /* Build configuration list for PBXNativeTarget "VRHouseFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEDF479721AD245B004B66AC /* Debug */,
+				AEDF479821AD245B004B66AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEDF477621AD245B004B66AC /* Project object */;
+}

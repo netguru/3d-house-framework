@@ -1,0 +1,9 @@
+//
+//  Tests-iOS.xcconfig
+//  VRHouseFramework
+//
+
+// Imports
+
+#include "Tests-Base.xcconfig"
+#include "../../Carthage/Checkouts/xcconfigs/Platforms/iOS.xcconfig"
