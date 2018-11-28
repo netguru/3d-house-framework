@@ -16,3 +16,4 @@ _BUNDLE_INFOPLIST_PATH = $(SRCROOT)/VRHouseFramework/Supporting Files/Framework-
 // Compiler
 
 _COMPILER_HARD_MODE = NO
+GCC_PREFIX_HEADER = $(SRCROOT)/VRHouseFramework/Supporting Files/Prefix.pch
