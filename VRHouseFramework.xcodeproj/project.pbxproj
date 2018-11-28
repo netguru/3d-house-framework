@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE6C615721AEAB030088D020 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		AE74945921AD5B4600F5D98E /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		AE74945B21AD5BEC00F5D98E /* Common-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Base.xcconfig"; sourceTree = "<group>"; };
 		AE74945C21AD5BEC00F5D98E /* Common-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 			children = (
 				AE74945921AD5B4600F5D98E /* Framework-Info.plist */,
 				AEE941EA21AD2553007F0F28 /* Tests-Info.plist */,
+				AE6C615721AEAB030088D020 /* Prefix.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
