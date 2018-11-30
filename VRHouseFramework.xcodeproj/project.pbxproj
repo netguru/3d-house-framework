@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C90FC7821B00E1E001FD9A3 /* SheetDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C90FC7721B00E1E001FD9A3 /* SheetDetection.cpp */; };
 		252EC471BD8F1AA6A92CFABB /* libPods-VRHouseFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF63231C5795B56A80F4EBD /* libPods-VRHouseFramework.a */; };
 		AEDF478921AD245B004B66AC /* VRHouseFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */; };
 		AEE941F421AD2553007F0F28 /* VRHouseFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,7 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C90FC7721B00E1E001FD9A3 /* SheetDetection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SheetDetection.cpp; sourceTree = "<group>"; };
 		AE6C615721AEAB030088D020 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		AE74945921AD5B4600F5D98E /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		AE74945B21AD5BEC00F5D98E /* Common-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Base.xcconfig"; sourceTree = "<group>"; };
@@ -38,8 +36,8 @@
 		AE74946021AD5BEC00F5D98E /* Tests-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Base.xcconfig"; sourceTree = "<group>"; };
 		AE74946121AD5BEC00F5D98E /* Tests-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Framework.xcconfig"; sourceTree = "<group>"; };
 		AE74946221AD5BEC00F5D98E /* Common-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Release.xcconfig"; sourceTree = "<group>"; };
-		AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VRHouseFramework.framework; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEDF478821AD245B004B66AC /* VRHouseFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VRHouseFrameworkTests.xctest; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VRHouseFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDF478821AD245B004B66AC /* VRHouseFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRHouseFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE941EA21AD2553007F0F28 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRHouseFramework.h; sourceTree = "<group>"; };
 		AEE941EE21AD2553007F0F28 /* OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCV.h; sourceTree = "<group>"; };
@@ -70,14 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C90FC7621B00E0A001FD9A3 /* SheetDetection */ = {
-			isa = PBXGroup;
-			children = (
-				0C90FC7721B00E1E001FD9A3 /* SheetDetection.cpp */,
-			);
-			path = SheetDetection;
-			sourceTree = "<group>";
-		};
 		29492F6B3B8ECAE148A743F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +143,6 @@
 		AEE941EC21AD2553007F0F28 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				0C90FC7621B00E0A001FD9A3 /* SheetDetection */,
 				AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */,
 				AEE941EE21AD2553007F0F28 /* OpenCV.h */,
 				AEE941EF21AD2553007F0F28 /* OpenCV.mm */,
@@ -303,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE941F621AD2554007F0F28 /* OpenCV.mm in Sources */,
-				0C90FC7821B00E1E001FD9A3 /* SheetDetection.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
