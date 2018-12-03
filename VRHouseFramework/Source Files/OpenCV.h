@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)openCVVersionString NS_SWIFT_NAME(openCVVersion());
 
-- (CGRect)findCorners:(UIImage *)image;
+- (NSArray<NSValue *>*)findCorners:(UIImage *)image;
 
 @end
 
