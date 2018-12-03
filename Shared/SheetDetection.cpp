@@ -36,10 +36,6 @@ vector<Point> SheetDetection::findCorners(InputArray input) {
     // resize input image
     resizeWithRatio(input, resized, DESIRED_WIDTH);
 
-    // display resized image
-    namedWindow("Display window", WINDOW_AUTOSIZE);
-    imshow("Display window", resized);
-
     // gray image
     Mat gray(resized.size(), CV_8U);
 
