@@ -15,6 +15,7 @@
 		AEE941F521AD2553007F0F28 /* OpenCV.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941EE21AD2553007F0F28 /* OpenCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEE941F621AD2554007F0F28 /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEE941EF21AD2553007F0F28 /* OpenCV.mm */; };
 		AEE941F821AD2557007F0F28 /* VRHouseFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE941F121AD2553007F0F28 /* VRHouseFrameworkTests.m */; };
+		AEF425D521B5776900514DB7 /* paper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF425D421B5776900514DB7 /* paper.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		AEE941EE21AD2553007F0F28 /* OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCV.h; sourceTree = "<group>"; };
 		AEE941EF21AD2553007F0F28 /* OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCV.mm; sourceTree = "<group>"; };
 		AEE941F121AD2553007F0F28 /* VRHouseFrameworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRHouseFrameworkTests.m; sourceTree = "<group>"; };
+		AEF425D421B5776900514DB7 /* paper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpg; sourceTree = "<group>"; };
 		C57A18F792DC3F4431AC1F96 /* Pods-VRHouseFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRHouseFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRHouseFramework/Pods-VRHouseFramework.release.xcconfig"; sourceTree = "<group>"; };
 		E2F8CB4D2C05E8F3DD93F792 /* Pods-VRHouseFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRHouseFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRHouseFramework/Pods-VRHouseFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		FDF63231C5795B56A80F4EBD /* libPods-VRHouseFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VRHouseFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +167,7 @@
 		AEE941F021AD2553007F0F28 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AEF425D421B5776900514DB7 /* paper.jpg */,
 				AEE941F121AD2553007F0F28 /* VRHouseFrameworkTests.m */,
 			);
 			path = "Unit Tests";
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF425D521B5776900514DB7 /* paper.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

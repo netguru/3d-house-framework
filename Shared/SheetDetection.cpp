@@ -5,15 +5,6 @@
 
 #include "SheetDetection.hpp"
 
-const int DESIRED_WIDTH = 640;
-
-void SheetDetection::resizeWithRatio(InputArray input, OutputArray result, int desiredWidth) {
-    float ratio = (float)input.rows() / input.cols();
-    Size resultSize = Size(desiredWidth, (int)(desiredWidth * ratio));
-
-    resize(input, result, resultSize);
-}
-
 int SheetDetection::findLargestContourIndex(vector<vector<Point>> contours) {
     double largestArea = 0;
     int largestContourIndex = 0;
@@ -29,21 +20,15 @@ int SheetDetection::findLargestContourIndex(vector<vector<Point>> contours) {
     return largestContourIndex;
 }
 
-vector<Point> SheetDetection::findCorners(InputArray input) {
-    // resized input
-    Mat resized;
-
-    // resize input image
-    resizeWithRatio(input, resized, DESIRED_WIDTH);
-
+vector<Point2f> SheetDetection::findCorners(InputArray input) {
     // gray image
-    Mat gray(resized.size(), CV_8U);
+    Mat gray(input.size(), CV_8U);
 
     // convert to gray
     #if CV_MAJOR_VERSION == 3
-    cvtColor(resized, gray, CV_BGR2GRAY);
+    cvtColor(input, gray, CV_BGR2GRAY);
     #elif CV_MAJOR_VERSION == 4
-    cvtColor(resized, gray, COLOR_BGR2GRAY);
+    cvtColor(input, gray, COLOR_BGR2GRAY);
     #endif
 
     // blurred image
@@ -71,8 +56,22 @@ vector<Point> SheetDetection::findCorners(InputArray input) {
     findContours(binary, contours, hierarchy, RETR_LIST, CHAIN_APPROX_SIMPLE);
     #endif
 
-    // find largest contour index
-    int largestContourIndex = findLargestContourIndex(contours);
+    // find the largest contour, if any
+    if (contours.size() < 1) {
+        vector<Point2f> emptyVector;
+        return emptyVector;
+    }
 
-    return contours[largestContourIndex];
+    int largestContourIndex = findLargestContourIndex(contours);
+    vector<Point> largestContour = contours[largestContourIndex];
+
+    // find four corners
+    RotatedRect rect = minAreaRect(largestContour);
+    Point2f corners[4];
+    rect.points(corners);
+
+    // convert the array to a vector
+    vector<Point2f> vector(begin(corners), end(corners));
+
+    return vector;
 }
