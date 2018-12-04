@@ -1,0 +1,10 @@
+//
+//  Prefix.pch
+//  VRHouseFramework
+//
+
+#ifdef __cplusplus
+#undef NO
+#undef YES
+#import <opencv2/opencv.hpp>
+#endif
