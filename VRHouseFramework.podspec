@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.static_framework = true
-  s.source_files = 'VRHouseFramework/Source Files/**/*'
+  s.source_files = 'VRHouseFramework/Source Files/**/*', 'Shared/**/*'
+  s.prefix_header_file = 'VRHouseFramework/Supporting Files/Prefix.pch'
   s.dependency 'OpenCV2', '~> 4.0.0'
 end

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		252EC471BD8F1AA6A92CFABB /* libPods-VRHouseFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF63231C5795B56A80F4EBD /* libPods-VRHouseFramework.a */; };
-		AE2AE7E921B51FD40018BE2B /* SheetDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE2AE7E821B51FD40018BE2B /* SheetDetection.cpp */; };
-		AE2AE7EB21B525930018BE2B /* SheetDetection.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AE2AE7EA21B525930018BE2B /* SheetDetection.hpp */; };
+		AEB201D521B68D2A00F20C0C /* SheetDetection.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AEB201D321B68D2A00F20C0C /* SheetDetection.hpp */; };
+		AEB201D621B68D2A00F20C0C /* SheetDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEB201D421B68D2A00F20C0C /* SheetDetection.cpp */; };
 		AEDF478921AD245B004B66AC /* VRHouseFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */; };
 		AEE941F421AD2553007F0F28 /* VRHouseFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEE941F521AD2553007F0F28 /* OpenCV.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941EE21AD2553007F0F28 /* OpenCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,8 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE2AE7E821B51FD40018BE2B /* SheetDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SheetDetection.cpp; path = Shared/SheetDetection.cpp; sourceTree = SOURCE_ROOT; };
-		AE2AE7EA21B525930018BE2B /* SheetDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SheetDetection.hpp; path = Shared/SheetDetection.hpp; sourceTree = SOURCE_ROOT; };
 		AE74945921AD5B4600F5D98E /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		AE74945B21AD5BEC00F5D98E /* Common-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Base.xcconfig"; sourceTree = "<group>"; };
 		AE74945C21AD5BEC00F5D98E /* Common-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,6 +38,9 @@
 		AE74946021AD5BEC00F5D98E /* Tests-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Base.xcconfig"; sourceTree = "<group>"; };
 		AE74946121AD5BEC00F5D98E /* Tests-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Framework.xcconfig"; sourceTree = "<group>"; };
 		AE74946221AD5BEC00F5D98E /* Common-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Release.xcconfig"; sourceTree = "<group>"; };
+		AEB201D121B68D0800F20C0C /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		AEB201D321B68D2A00F20C0C /* SheetDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SheetDetection.hpp; sourceTree = "<group>"; };
+		AEB201D421B68D2A00F20C0C /* SheetDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SheetDetection.cpp; sourceTree = "<group>"; };
 		AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VRHouseFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDF478821AD245B004B66AC /* VRHouseFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRHouseFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE941EA21AD2553007F0F28 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -90,15 +91,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		AE2AE7E721B51FBE0018BE2B /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				AE2AE7EA21B525930018BE2B /* SheetDetection.hpp */,
-				AE2AE7E821B51FD40018BE2B /* SheetDetection.cpp */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		AE74945A21AD5BEC00F5D98E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +105,15 @@
 			);
 			path = Configuration;
 			sourceTree = "<group>";
+		};
+		AEB201D221B68D2A00F20C0C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AEB201D321B68D2A00F20C0C /* SheetDetection.hpp */,
+				AEB201D421B68D2A00F20C0C /* SheetDetection.cpp */,
+			);
+			path = Shared;
+			sourceTree = SOURCE_ROOT;
 		};
 		AEDF477521AD245B004B66AC = {
 			isa = PBXGroup;
@@ -149,6 +150,7 @@
 			children = (
 				AE74945921AD5B4600F5D98E /* Framework-Info.plist */,
 				AEE941EA21AD2553007F0F28 /* Tests-Info.plist */,
+				AEB201D121B68D0800F20C0C /* Prefix.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,7 +161,7 @@
 				AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */,
 				AEE941EE21AD2553007F0F28 /* OpenCV.h */,
 				AEE941EF21AD2553007F0F28 /* OpenCV.mm */,
-				AE2AE7E721B51FBE0018BE2B /* Shared */,
+				AEB201D221B68D2A00F20C0C /* Shared */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
@@ -180,7 +182,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2AE7EB21B525930018BE2B /* SheetDetection.hpp in Headers */,
+				AEB201D521B68D2A00F20C0C /* SheetDetection.hpp in Headers */,
 				AEE941F421AD2553007F0F28 /* VRHouseFramework.h in Headers */,
 				AEE941F521AD2553007F0F28 /* OpenCV.h in Headers */,
 			);
@@ -305,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE941F621AD2554007F0F28 /* OpenCV.mm in Sources */,
-				AE2AE7E921B51FD40018BE2B /* SheetDetection.cpp in Sources */,
+				AEB201D621B68D2A00F20C0C /* SheetDetection.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
