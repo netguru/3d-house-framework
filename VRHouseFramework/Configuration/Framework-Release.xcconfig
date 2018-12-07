@@ -7,4 +7,4 @@
 
 #include "Framework-Base.xcconfig"
 #include "../../Carthage/Checkouts/xcconfigs/Platforms/iOS.xcconfig"
-#include "Pods/Target Support Files/Pods-VRHouseFramework/Pods-VRHouseFramework.release.xcconfig"
+#include "../../Pods/Target Support Files/Pods-VRHouseFramework/Pods-VRHouseFramework.release.xcconfig"

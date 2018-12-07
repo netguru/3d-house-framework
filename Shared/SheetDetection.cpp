@@ -20,7 +20,7 @@ int SheetDetection::findLargestContourIndex(vector<vector<Point>> contours) {
     return largestContourIndex;
 }
 
-vector<Point2f> SheetDetection::findCorners(InputArray input) {
+vector<Point> SheetDetection::findCorners(InputArray input) {
     // gray image
     Mat gray(input.size(), CV_8U);
 
@@ -41,13 +41,11 @@ vector<Point2f> SheetDetection::findCorners(InputArray input) {
     Mat binary(blurred.size(), blurred.type());
 
     // apply thresholding
-    threshold(blurred, binary, 128, 255, THRESH_BINARY);
+    threshold(blurred, binary, 155, 255, THRESH_BINARY);
 
     // contour detection starts here
     vector<vector<Point>> contours;
     vector<Vec4i> hierarchy;
-    Scalar green(0, 255, 0);
-    Scalar red(0, 0, 255);
 
     // find contours
     #if CV_MAJOR_VERSION == 3
@@ -58,20 +56,25 @@ vector<Point2f> SheetDetection::findCorners(InputArray input) {
 
     // find the largest contour, if any
     if (contours.size() < 1) {
-        vector<Point2f> emptyVector;
+        vector<Point> emptyVector;
         return emptyVector;
     }
 
     int largestContourIndex = findLargestContourIndex(contours);
     vector<Point> largestContour = contours[largestContourIndex];
 
-    // find four corners
-    RotatedRect rect = minAreaRect(largestContour);
-    Point2f corners[4];
-    rect.points(corners);
+    // find corners
+    vector<Point> hull;
+    convexHull(largestContour, hull);
 
-    // convert the array to a vector
-    vector<Point2f> vector(begin(corners), end(corners));
+    // get only extreme conrners
+    auto topLeftBottomRight = std::minmax_element(hull.begin(), hull.end(), [](const Point &a, const Point &b) {
+        return (a.x + a.y) < (b.x + b.y);
+    });
 
-    return vector;
+    auto topRightBottomLeft = minmax_element(hull.begin(), hull.end(), [](const Point &a, const Point &b) {
+        return (a.x - a.y) > (b.x - b.y);
+    });
+
+    return {*topLeftBottomRight.first, *topRightBottomLeft.first, *topLeftBottomRight.second, *topRightBottomLeft.second};
 }

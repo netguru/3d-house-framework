@@ -14,7 +14,14 @@ using namespace std;
 class SheetDetection {
 
 public:
-    vector<cv::Point2f> findCorners(cv::InputArray input);
+    /**
+     Returns found corners of the given Mat in the clockwise order:
+     top-left, top-right, bottom-right, and bottom-left.
+
+     @param input The given Mat.
+     @return A vector of Points.
+     */
+    vector<cv::Point> findCorners(cv::InputArray input);
 
 private:
     int findLargestContourIndex(vector<vector<cv::Point>> contours);

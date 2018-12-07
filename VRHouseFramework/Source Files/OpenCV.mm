@@ -36,10 +36,11 @@
 
 
 /**
- Returns a corners of found piece of paper on the given UIImage.
+ Returns a corners of found piece of paper on the given UIImage in the clockwise order:
+ top-left, top-right, bottom-right, and bottom-left.
 
  @param image The image to be processed.
- @return Four corners of founf piece of paper or an empty array if not found.
+ @return Four corners of found piece of paper or an empty array if not found.
  */
 - (NSArray<NSValue *>*)findCorners:(UIImage *)image {
     if (image == nil) {
@@ -47,7 +48,7 @@
     }
 
     Mat mat = [self cvMatWithImage:image];
-    vector<Point2f> corners = self.sheetDetection.findCorners(mat);
+    vector<cv::Point> corners = self.sheetDetection.findCorners(mat);
 
     NSMutableArray *array = [NSMutableArray new];
     for (NSUInteger i = 0; i < corners.size(); i++) {
