@@ -44,20 +44,20 @@
     XCTAssertEqual(array.count, 4);
 
     CGPoint point1 = array[0].CGPointValue;
-    XCTAssertEqual(point1.x, 611);
-    XCTAssertEqual(point1.y, 374);
+    XCTAssertEqual(point1.x, 606);
+    XCTAssertEqual(point1.y, 364);
 
     CGPoint point2 = array[1].CGPointValue;
-    XCTAssertEqual(point2.x, 2628);
-    XCTAssertEqual(point2.y, 406);
+    XCTAssertEqual(point2.x, 2635);
+    XCTAssertEqual(point2.y, 400);
 
     CGPoint point3 = array[2].CGPointValue;
-    XCTAssertEqual(point3.x, 2723);
-    XCTAssertEqual(point3.y, 3501);
+    XCTAssertEqual(point3.x, 2727);
+    XCTAssertEqual(point3.y, 3506);
 
     CGPoint point4 = array[3].CGPointValue;
-    XCTAssertEqual(point4.x, 291);
-    XCTAssertEqual(point4.y, 3366);
+    XCTAssertEqual(point4.x, 283);
+    XCTAssertEqual(point4.y, 3373);
 }
 
 - (void)testFindCornersFailureNil {

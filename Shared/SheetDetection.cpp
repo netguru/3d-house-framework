@@ -22,7 +22,9 @@ int SheetDetection::findLargestContourIndex(vector<vector<Point>> contours) {
 
 vector<Point> SheetDetection::findCorners(InputArray input) {
     // gray image
-    Mat gray(input.size(), CV_8U);
+    Mat src(input.size(), CV_8U);
+
+    Mat gray = src.clone();
 
     // convert to gray
     #if CV_MAJOR_VERSION == 3
@@ -35,13 +37,15 @@ vector<Point> SheetDetection::findCorners(InputArray input) {
     Mat blurred(gray.size(), gray.type());
 
     // blur the image
-    blur(gray, blurred, Size(20, 20));
+    bilateralFilter(gray, blurred, 9, 100, 100);
 
     // binary input
     Mat binary(blurred.size(), blurred.type());
 
     // apply thresholding
     threshold(blurred, binary, 155, 255, THRESH_BINARY);
+    Mat edges;
+    Canny(binary, edges, 175, 255);
 
     // contour detection starts here
     vector<vector<Point>> contours;
@@ -49,9 +53,9 @@ vector<Point> SheetDetection::findCorners(InputArray input) {
 
     // find contours
     #if CV_MAJOR_VERSION == 3
-    findContours(binary, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE);
+    findContours(edges, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE);
     #elif CV_MAJOR_VERSION == 4
-    findContours(binary, contours, hierarchy, RETR_LIST, CHAIN_APPROX_SIMPLE);
+    findContours(edges, contours, hierarchy, RETR_LIST, CHAIN_APPROX_SIMPLE);
     #endif
 
     // find the largest contour, if any
