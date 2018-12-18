@@ -22,6 +22,7 @@ public:
      @return A vector of Points.
      */
     vector<cv::Point> findCorners(cv::InputArray input);
+    Mat cropSelectedArea(Mat input, Point2f topLeft, Point2f topRight, Point2f bottomLeft, Point2f bottomRight);
 
 private:
     int findLargestContourIndex(vector<vector<cv::Point>> contours);
