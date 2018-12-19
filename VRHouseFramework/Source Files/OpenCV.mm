@@ -5,6 +5,7 @@
 
 #import "OpenCV.h"
 #import "SheetDetection.hpp"
+#import <opencv2/imgcodecs/ios.h>
 
 @interface OpenCV ()
 
@@ -34,7 +35,6 @@
     return [NSString stringWithFormat:@"OpenCV Version %s", CV_VERSION];
 }
 
-
 /**
  Returns a corners of found piece of paper on the given UIImage in the clockwise order:
  top-left, top-right, bottom-right, and bottom-left.
@@ -47,7 +47,8 @@
         return @[];
     }
 
-    Mat mat = [self cvMatWithImage:image];
+    Mat mat;
+    UIImageToMat(image, mat);
     vector<cv::Point> corners = self.sheetDetection.findCorners(mat);
 
     NSMutableArray *array = [NSMutableArray new];
@@ -59,38 +60,25 @@
 }
 
 /**
- Returns a Mat based on the given UIImage.
+ Crops and applies a perspective transformation to the given UIImage.
 
- @param image The image to be used to create a Mat.
- @return The Mat object created from the given UIImage.
+ @param source The image to be processed.
+ @param topLeft The top left corner.
+ @param topRight The top right corner.
+ @param bottomLeft The bottom left corner.
+ @param bottomRight The bottom right corner.
+ @return A cropped UIImage with applied a perspective transformation.
  */
-- (cv::Mat)cvMatWithImage:(UIImage *)image {
-    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
-    size_t numberOfComponents = CGColorSpaceGetNumberOfComponents(colorSpace);
-    int cols = int(image.size.width);
-    int rows = int(image.size.height);
+- (UIImage *)cropImage:(UIImage *)source topLeft:(CGPoint)topLeft topRight:(CGPoint)topRight bottomLeft:(CGPoint)bottomLeft bottomRight:(CGPoint)bottomRight {
+    Mat mat;
+    UIImageToMat(source, mat);
+    Mat cropped = self.sheetDetection.cropSelectedArea(mat,
+                                                       Point2f((float)topLeft.x, (float)topLeft.y),
+                                                       Point2f((float)topRight.x, (float)topRight.y),
+                                                       Point2f((float)bottomLeft.x, (float)bottomLeft.y),
+                                                       Point2f((float)bottomRight.x, (float)bottomRight.y));
 
-    cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
-    CGBitmapInfo bitmapInfo = kCGImageAlphaNoneSkipLast | kCGBitmapByteOrderDefault;
-
-    // check whether the UIImage is greyscale already
-    if (numberOfComponents == 1) {
-        cvMat = cv::Mat(rows, cols, CV_8UC1); // 8 bits per component, 1 channels
-        bitmapInfo = kCGImageAlphaNone | kCGBitmapByteOrderDefault;
-    }
-
-    CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,        // Pointer to backing data
-                                                    cols,              // Width of bitmap
-                                                    rows,              // Height of bitmap
-                                                    8,                 // Bits per component
-                                                    cvMat.step[0],     // Bytes per row
-                                                    colorSpace,        // Colorspace
-                                                    bitmapInfo);       // Bitmap info flags
-
-    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
-    CGContextRelease(contextRef);
-
-    return cvMat;
+    return MatToUIImage(cropped);
 }
 
 @end

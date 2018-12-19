@@ -22,6 +22,17 @@ public:
      @return A vector of Points.
      */
     vector<cv::Point> findCorners(cv::InputArray input);
+
+    /**
+     Crops the given Mat using the given corners.
+
+     @param input The given Mat.
+     @param topLeft The top left corner.
+     @param topRight The top right corner.
+     @param bottomLeft The bottom left corner.
+     @param bottomRight The bottom right corner.
+     @return A cropped Mat with applied a perspective transformation.
+     */
     Mat cropSelectedArea(Mat input, Point2f topLeft, Point2f topRight, Point2f bottomLeft, Point2f bottomRight);
 
 private:

@@ -83,7 +83,7 @@ vector<Point> SheetDetection::findCorners(InputArray input) {
     return {*topLeftBottomRight.first, *topRightBottomLeft.first, *topLeftBottomRight.second, *topRightBottomLeft.second};
 }
 
-Mat cropSelectedArea(Mat input, Point2f topLeft, Point2f topRight, Point2f bottomLeft, Point2f bottomRight) {
+Mat SheetDetection::cropSelectedArea(Mat input, Point2f topLeft, Point2f topRight, Point2f bottomLeft, Point2f bottomRight) {
     Point2f src_vertices[4] {topLeft, topRight, bottomLeft, bottomRight};
     int n = sizeof(src_vertices) / sizeof(src_vertices[0]);
     vector<Point> corners(src_vertices, src_vertices + n);
