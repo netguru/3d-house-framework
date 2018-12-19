@@ -67,4 +67,21 @@
     XCTAssertEqual(array.count, 0);
 }
 
+- (void)testCrop {
+    UIImage *image = [UIImage imageNamed:@"paper.jpg"
+                                inBundle:[NSBundle bundleForClass:[self class]]
+           compatibleWithTraitCollection:nil];
+
+    CGPoint topLeft = CGPointMake(606, 364);
+    CGPoint topRight = CGPointMake(2635, 400);
+    CGPoint bottomLeft = CGPointMake(283, 3373);
+    CGPoint bottomRight = CGPointMake(2727, 3506);
+
+    UIImage *croppedImage = [self.sut cropImage:image topLeft:topLeft topRight:topRight bottomLeft:bottomLeft bottomRight:bottomRight];
+
+    XCTAssertNotNil(croppedImage);
+    XCTAssertEqual(croppedImage.size.width, 2614);
+    XCTAssertEqual(croppedImage.size.height, 3226);
+}
+
 @end
