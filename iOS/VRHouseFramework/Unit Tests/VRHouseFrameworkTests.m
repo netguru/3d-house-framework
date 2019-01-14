@@ -5,6 +5,7 @@
 
 @import XCTest;
 #import <VRHouseFramework/OpenCV.h>
+#import <VRHouseFramework/Wall.h>
 
 @interface VRHouseFrameworkTests: XCTestCase
 
@@ -82,6 +83,15 @@
     XCTAssertNotNil(croppedImage);
     XCTAssertEqual(croppedImage.size.width, 2614);
     XCTAssertEqual(croppedImage.size.height, 3226);
+}
+
+- (void)testFindWalls {
+    UIImage *image = [UIImage imageNamed:@"plan.jpg"
+                                inBundle:[NSBundle bundleForClass:[self class]]
+           compatibleWithTraitCollection:nil];
+
+    NSArray<Wall *> *walls = [self.sut findWalls:image];
+    XCTAssertEqual(walls.count, 72);
 }
 
 @end

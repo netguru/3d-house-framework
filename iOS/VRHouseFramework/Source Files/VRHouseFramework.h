@@ -5,6 +5,7 @@
 
 @import UIKit;
 #import <VRHouseFramework/OpenCV.h>
+#import <VRHouseFramework/Wall.h>
 
 //! Project version number for VRHouseFramework.
 FOUNDATION_EXPORT double VRHouseFrameworkVersionNumber;

@@ -7,6 +7,8 @@
 #import <UIKit/UIKit.h>
 #endif
 
+@class Wall;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OpenCV: NSObject
@@ -16,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray<NSValue *>*)findCorners:(UIImage *)image;
 
 - (UIImage *)cropImage:(UIImage *)source topLeft:(CGPoint)topLeft topRight:(CGPoint)topRight bottomLeft:(CGPoint)bottomLeft bottomRight:(CGPoint)bottomRight;
+
+- (NSArray<Wall *> *)findWalls:(UIImage *)image;
 
 @end
 
