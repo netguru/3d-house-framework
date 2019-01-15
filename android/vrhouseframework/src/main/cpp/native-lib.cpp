@@ -16,7 +16,7 @@ jobject mat_to_bitmap(JNIEnv *env, Mat &src, jobject bitmap_config, bool needPre
 
 
 extern "C" JNIEXPORT jfloatArray JNICALL
-Java_co_netguru_house_planRecognizer_NativeRecognizer_recognizePlane(
+Java_co_netguru_vrhouseframework_NativeRecognizer_recognizePlane(
         JNIEnv *env,
         jobject _this,
         jobject bitmap) {
@@ -41,7 +41,7 @@ Java_co_netguru_house_planRecognizer_NativeRecognizer_recognizePlane(
 }
 
 extern "C" JNIEXPORT jobject JNICALL
-Java_co_netguru_house_planRecognizer_NativeRecognizer_cropSelectedArea(
+Java_co_netguru_vrhouseframework_NativeRecognizer_cropSelectedArea(
         JNIEnv *env,
         jobject _this,
         jobject bitmap,
