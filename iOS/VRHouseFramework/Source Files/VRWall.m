@@ -1,13 +1,13 @@
 //
-//  Wall.m
+//  VRWall.m
 //  VRHouseFramework
 //
 
-#import "Wall.h"
+#import "VRWall.h"
 
-@implementation Wall
+@implementation VRWall
 
--(id)initWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
+- (id)initWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
     if (self = [super init]) {
         self.startPoint = startPoint;
         self.endPoint = endPoint;

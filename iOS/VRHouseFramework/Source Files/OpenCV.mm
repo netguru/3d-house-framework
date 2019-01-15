@@ -6,7 +6,6 @@
 #import "OpenCV.h"
 #import "SheetDetection.hpp"
 #import "WallsDetection.hpp"
-#import "Wall.h"
 #import <opencv2/imgcodecs/ios.h>
 
 @interface OpenCV ()
@@ -85,7 +84,7 @@
     return MatToUIImage(cropped);
 }
 
-- (NSArray *)findWalls:(UIImage *)image {
+- (NSArray<VRWall *>*)findWalls:(UIImage *)image {
     Mat mat;
     UIImageToMat(image, mat);
     vector<vector<cv::Point>> walls = self.wallsDetection.findWalls(mat);
@@ -94,7 +93,7 @@
     for (NSUInteger i = 0; i < walls.size(); i++) {
         CGPoint startPoint = CGPointMake(walls[i][0].x, walls[i][0].y);
         CGPoint endPoint = CGPointMake(walls[i][1].x, walls[i][1].y);
-        Wall *wall = [[Wall alloc] initWithStartPoint:startPoint endPoint:endPoint];
+        VRWall *wall = [[VRWall alloc] initWithStartPoint:startPoint endPoint:endPoint];
         [array addObject:wall];
     }
 

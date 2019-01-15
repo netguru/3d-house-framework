@@ -1,5 +1,5 @@
 //
-//  Wall.h
+//  VRWall.h
 //  VRHouseFramework
 //
 
@@ -8,12 +8,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Wall: NSObject
+@interface VRWall: NSObject
 
 @property (assign, nonatomic) CGPoint startPoint;
 @property (assign, nonatomic) CGPoint endPoint;
 
--(id)initWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint;
+- (id)initWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint;
 
 @end
 

@@ -5,9 +5,8 @@
 
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#import "VRWall.h"
 #endif
-
-@class Wall;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)cropImage:(UIImage *)source topLeft:(CGPoint)topLeft topRight:(CGPoint)topRight bottomLeft:(CGPoint)bottomLeft bottomRight:(CGPoint)bottomRight;
 
-- (NSArray<Wall *> *)findWalls:(UIImage *)image;
+- (NSArray<VRWall *>*)findWalls:(UIImage *)image;
 
 @end
 

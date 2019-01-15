@@ -5,7 +5,6 @@
 
 @import XCTest;
 #import <VRHouseFramework/OpenCV.h>
-#import <VRHouseFramework/Wall.h>
 
 @interface VRHouseFrameworkTests: XCTestCase
 
@@ -90,7 +89,7 @@
                                 inBundle:[NSBundle bundleForClass:[self class]]
            compatibleWithTraitCollection:nil];
 
-    NSArray<Wall *> *walls = [self.sut findWalls:image];
+    NSArray<VRWall *> *walls = [self.sut findWalls:image];
     XCTAssertEqual(walls.count, 72);
 }
 

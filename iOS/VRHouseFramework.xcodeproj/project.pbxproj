@@ -13,8 +13,8 @@
 		AE5390E821ECADC2003F9AB1 /* WallsDetection.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AE5390E621ECADC2003F9AB1 /* WallsDetection.hpp */; };
 		AE5390E921ECADC2003F9AB1 /* WallsDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE5390E721ECADC2003F9AB1 /* WallsDetection.cpp */; };
 		AE5390EC21ECBF75003F9AB1 /* plan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5390EA21ECBF68003F9AB1 /* plan.jpg */; };
-		AE5390EF21ECC868003F9AB1 /* Wall.h in Headers */ = {isa = PBXBuildFile; fileRef = AE5390ED21ECC868003F9AB1 /* Wall.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE5390F021ECC868003F9AB1 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5390EE21ECC868003F9AB1 /* Wall.m */; };
+		AE5390EF21ECC868003F9AB1 /* VRWall.h in Headers */ = {isa = PBXBuildFile; fileRef = AE5390ED21ECC868003F9AB1 /* VRWall.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE5390F021ECC868003F9AB1 /* VRWall.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5390EE21ECC868003F9AB1 /* VRWall.m */; };
 		AEDF478921AD245B004B66AC /* VRHouseFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDF477F21AD245B004B66AC /* VRHouseFramework.framework */; };
 		AEE941F421AD2553007F0F28 /* VRHouseFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEE941F521AD2553007F0F28 /* OpenCV.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE941EE21AD2553007F0F28 /* OpenCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,8 +39,8 @@
 		AE5390E621ECADC2003F9AB1 /* WallsDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WallsDetection.hpp; sourceTree = "<group>"; };
 		AE5390E721ECADC2003F9AB1 /* WallsDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WallsDetection.cpp; sourceTree = "<group>"; };
 		AE5390EA21ECBF68003F9AB1 /* plan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plan.jpg; sourceTree = "<group>"; };
-		AE5390ED21ECC868003F9AB1 /* Wall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
-		AE5390EE21ECC868003F9AB1 /* Wall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wall.m; sourceTree = "<group>"; };
+		AE5390ED21ECC868003F9AB1 /* VRWall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VRWall.h; sourceTree = "<group>"; };
+		AE5390EE21ECC868003F9AB1 /* VRWall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VRWall.m; sourceTree = "<group>"; };
 		AE74945921AD5B4600F5D98E /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		AE74945B21AD5BEC00F5D98E /* Common-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Base.xcconfig"; sourceTree = "<group>"; };
 		AE74945C21AD5BEC00F5D98E /* Common-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Common-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 				AEE941ED21AD2553007F0F28 /* VRHouseFramework.h */,
 				AEE941EE21AD2553007F0F28 /* OpenCV.h */,
 				AEE941EF21AD2553007F0F28 /* OpenCV.mm */,
-				AE5390ED21ECC868003F9AB1 /* Wall.h */,
-				AE5390EE21ECC868003F9AB1 /* Wall.m */,
+				AE5390ED21ECC868003F9AB1 /* VRWall.h */,
+				AE5390EE21ECC868003F9AB1 /* VRWall.m */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE5390EF21ECC868003F9AB1 /* Wall.h in Headers */,
+				AE5390EF21ECC868003F9AB1 /* VRWall.h in Headers */,
 				AE09404D21E8F011009EBF8C /* SheetDetection.hpp in Headers */,
 				AEE941F421AD2553007F0F28 /* VRHouseFramework.h in Headers */,
 				AE5390E821ECADC2003F9AB1 /* WallsDetection.hpp in Headers */,
@@ -326,7 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE941F621AD2554007F0F28 /* OpenCV.mm in Sources */,
-				AE5390F021ECC868003F9AB1 /* Wall.m in Sources */,
+				AE5390F021ECC868003F9AB1 /* VRWall.m in Sources */,
 				AE5390E921ECADC2003F9AB1 /* WallsDetection.cpp in Sources */,
 				AE09404E21E8F011009EBF8C /* SheetDetection.cpp in Sources */,
 			);
