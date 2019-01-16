@@ -15,9 +15,6 @@
 
 @end
 
-/**
- An OpenCV wrapper.
- */
 @implementation OpenCV
 
 - (id)init {
@@ -29,22 +26,10 @@
     return self;
 }
 
-/**
- Returns the current OpenCV version string.
-
- @return The current OpenCV version string.
- */
 + (NSString *)openCVVersionString {
     return [NSString stringWithFormat:@"OpenCV Version %s", CV_VERSION];
 }
 
-/**
- Returns a corners of found piece of paper on the given UIImage in the clockwise order:
- top-left, top-right, bottom-right, and bottom-left.
-
- @param image The image to be processed.
- @return Four corners of found piece of paper or an empty array if not found.
- */
 - (NSArray<NSValue *>*)findCorners:(UIImage *)image {
     if (image == nil) {
         return @[];
@@ -62,16 +47,6 @@
     return array;
 }
 
-/**
- Crops and applies a perspective transformation to the given UIImage.
-
- @param source The image to be processed.
- @param topLeft The top left corner.
- @param topRight The top right corner.
- @param bottomLeft The bottom left corner.
- @param bottomRight The bottom right corner.
- @return A cropped UIImage with applied a perspective transformation.
- */
 - (UIImage *)cropImage:(UIImage *)source topLeft:(CGPoint)topLeft topRight:(CGPoint)topRight bottomLeft:(CGPoint)bottomLeft bottomRight:(CGPoint)bottomRight {
     Mat mat;
     UIImageToMat(source, mat);
