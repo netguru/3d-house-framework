@@ -84,4 +84,29 @@
     XCTAssertEqual(croppedImage.size.height, 3226);
 }
 
+- (void)testFindWalls {
+    UIImage *image = [UIImage imageNamed:@"plan.jpg"
+                                inBundle:[NSBundle bundleForClass:[self class]]
+           compatibleWithTraitCollection:nil];
+
+    NSArray<VRWall *> *walls = [self.sut findWalls:image];
+
+    XCTAssertNotEqual(walls.count, 0);
+
+    for (NSUInteger i = 0; i < walls.count; i++) {
+        VRWall *wall = walls[i];
+        XCTAssertFalse(CGPointEqualToPoint(wall.startPoint, wall.endPoint), @"Start point and end point must not be the same");
+    }
+}
+
+- (void)testWallLength {
+    CGPoint point1 = CGPointMake(0, 0);
+    CGPoint point2 = CGPointMake(10, 10);
+    VRWall *wall1 = [[VRWall alloc] initWithStartPoint:point1 endPoint:point2];
+    VRWall *wall2 = [[VRWall alloc] initWithStartPoint:point2 endPoint:point1];
+
+    XCTAssertEqual(wall1.length, wall2.length);
+    XCTAssertEqual(wall1.length, (CGFloat)(10.0 * sqrt(2)));
+}
+
 @end
