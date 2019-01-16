@@ -16,4 +16,8 @@
     return self;
 }
 
+- (CGFloat)length {
+    return (CGFloat)(hypot(self.startPoint.x - self.endPoint.x, self.startPoint.y - self.endPoint.y));
+}
+
 @end
