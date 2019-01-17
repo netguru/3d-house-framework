@@ -2,6 +2,8 @@
 
 ## Requirements
 
+* AndroidStudio
+
 ### iOS
 
 * Xcode
@@ -20,7 +22,24 @@ pod 'VRHouseFramework', :git => 'git@github.com:netguru/3d-house-framework.git',
 
 ### Android
 
-TBD
+1. Open AndroidStudio project (I assume it has Git configured).
+2. From android studio project terminal add this repository as submodule 
+```bash
+git submodule add git@github.com:netguru/3d-house-framework.git
+```
+
+3. You will get message like "Unregistered VCS root detected ..."
+Click on "Add root".
+Now you can see multiple git repositories at the right bottom of the android studio.
+
+4. Goto file menu —> project structure
+5. Click ‘+’ on left top to add module
+6. Select ‘Import Gradle Project’ from new window
+7. Select the sub-module folder
+8. Give the actual sub-module project name (if needed)
+9. Sync 
+10. You should have your sub-module added!
+
 
 ## Development
 
@@ -63,7 +82,9 @@ Run `pod lib lint --allow-warnings` to lint the library against CocoaPods.
 
 ### Android
 
-TBD
+Just clone the repo and open it in AndroidStudio.
+Under "app" is sample app that checks if library module works.
+Library itself is in "vrhouseframework" module (and it's relying on "opencv" submodule).
 
 ## Author
 
