@@ -39,6 +39,11 @@ Now you can see multiple git repositories at the right bottom of the android stu
 8. Give the actual sub-module project name (if needed)
 9. Sync 
 10. You should have your sub-module added!
+11. Now just in you app level build.gradle add dependency 
+```
+implementation project(':vrhouseframework')
+```
+and thats all!
 
 
 ## Development
