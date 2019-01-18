@@ -94,6 +94,7 @@ Library itself is in "vrhouseframework" module (and it's relying on "opencv" sub
 ## Author
 
 Piotr Sochalewski, piotr.sochalewski@netguru.co
+Marcin Oziemski, marcin.oziemski@netguru.co
 
 ## License
 
