@@ -9,13 +9,34 @@
         tools:context=".MainActivity">
 
     <TextView
-            android:id="@+id/sample_text"
+            android:id="@+id/above_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
+            app:layout_constraintBottom_toTopOf="@+id/image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/house_plan"
+            android:adjustViewBounds="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/above_text"/>
+
+    <co.netguru.vrhouseframework.WallsOverlayView
+            android:id="@+id/walls_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintLeft_toLeftOf="@+id/image"
+            app:layout_constraintRight_toRightOf="@+id/image"
+            app:layout_constraintTop_toTopOf="@+id/image"/>
 
 </android.support.constraint.ConstraintLayout>
