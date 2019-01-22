@@ -2,18 +2,54 @@
 #include <string>
 #include <opencv2/opencv.hpp>
 #include "../../../../../Shared/SheetDetection.hpp"
+#include "../../../../../Shared/WallsDetection.hpp"
 #include <android/bitmap.h>
 #include <android/log.h>
 
 using namespace std;
 
 SheetDetection sd;
+WallsDetection wd;
 
 Mat *nBitmapToMat2
         (JNIEnv *env, jobject bitmap, bool needUnPremultiplyAlpha);
 
 jobject mat_to_bitmap(JNIEnv *env, Mat &src, jobject bitmap_config, bool needPremultiplyAlpha);
 
+
+extern "C" JNIEXPORT jobjectArray JNICALL
+Java_co_netguru_vrhouseframework_NativeRecognizer_findWalls(
+        JNIEnv *env,
+        jobject _this,
+        jobject bitmap) {
+
+    Mat *input = nBitmapToMat2(env, bitmap, false);
+    vector<vector<cv::Point>> resultVector = wd.findWalls(*input);
+    delete input;
+
+
+    jclass floatArray1DClass = env->FindClass("[F");
+    jobjectArray result = env->NewObjectArray(static_cast<jsize>(resultVector.size()), floatArray1DClass, NULL);
+
+    int a = 0;
+    for (auto &vector : resultVector) {
+        int b = 0;
+        unsigned long resultSize = vector.size() * 2;
+        jfloatArray wall = env -> NewFloatArray(static_cast<jsize>(resultSize));
+        float *data;
+        data = new float[resultSize];
+        for (auto &point : vector) {
+            data[b] = point.x;
+            data[b + 1] = point.y;
+            b += 2;
+        }
+        env->SetFloatArrayRegion(wall, 0, static_cast<jsize>(resultSize), data);
+        env->SetObjectArrayElement(result, a, wall);
+        a++;
+        delete[] data;
+    }
+    return result;
+}
 
 extern "C" JNIEXPORT jfloatArray JNICALL
 Java_co_netguru_vrhouseframework_NativeRecognizer_recognizePlane(

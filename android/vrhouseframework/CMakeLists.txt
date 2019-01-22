@@ -21,6 +21,7 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              src/main/cpp/native-lib.cpp
              ../../Shared/SheetDetection.cpp
+             ../../Shared/WallsDetection.cpp
         )
 
 # Searches for a specified prebuilt library and stores the path as a
