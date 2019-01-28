@@ -91,10 +91,10 @@ Just clone the repo and open it in AndroidStudio.
 Under "app" is sample app that checks if library module works.
 Library itself is in "vrhouseframework" module (and it's relying on "opencv" submodule).
 
-## Author
-
-Piotr Sochalewski, piotr.sochalewski@netguru.co
-Marcin Oziemski, marcin.oziemski@netguru.co
+## Authors
+* [Piotr Sochalewski](mailto:piotr.sochalewski@netguru.co)
+* [Marcin Oziemski](mailto:marcin.oziemski@netguru.co)
+* [Piotr Sękara](mailto:piotr.sekara@netguru.co)
 
 ## License
 
