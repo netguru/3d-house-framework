@@ -27,12 +27,7 @@ vector<vector<cv::Point>> WallsDetection::findWalls(cv::Mat input) {
 
     for (size_t i = 0; i < lines.size(); i++) {
         Vec4i l = lines[i];
-        int x1 = int(l[0] / scale);
-        int y1 = int(l[1] / scale);
-        int x2 = int(l[2] / scale);
-        int y2 = int(l[3] / scale);
-
-        vector<cv::Point> wall = { Point(x1, y1), Point(x2, y2) };
+        vector<cv::Point> wall = { Point(l[0], l[1]), Point(l[2], l[3]) };
         linesToReturn.push_back(wall);
     }
 
