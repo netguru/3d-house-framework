@@ -5,24 +5,16 @@
 
 #include "WallsDetection.hpp"
 
-int MAX_LENGTH = 800;
-
 vector<vector<cv::Point>> WallsDetection::findWalls(cv::Mat input) {
     Mat img = input.clone();
 
-    // Scale as threshold and dilate parameters works best for images up to 800x800.
-    int height = img.rows;
-    int width = img.cols;
-    bool isTall = height > width;
-    int newHeight = isTall ? MAX_LENGTH : (int)(((float)MAX_LENGTH / (float)width) * (float)height);
-    int newWidth = isTall ? (int)(((float)MAX_LENGTH / (float)height) * (float)width) : MAX_LENGTH;
-    float scale = (float)newHeight / (float)height;
+    threshold(img, img, 210, 255, THRESH_BINARY);
 
-    resize(img, img, Size(newWidth, newHeight));
-
-    threshold(img, img, 245, 255, THRESH_BINARY);
-    dilate(img, img, cv::Mat());
-    dilate(img, img, cv::Mat());
+    int an = 2;
+    Mat closeElement = getStructuringElement(MORPH_RECT, Size(an*2+1, an*2+1), Point(an, an));
+    Mat openElement = getStructuringElement(MORPH_RECT, Size(an*2, an*2), Point(an, an));
+    morphologyEx(img, img, MORPH_CLOSE, closeElement);
+    morphologyEx(img, img, MORPH_OPEN, openElement);
 
     Mat dst, cdst;
     Canny(img, dst, 50, 200, 3);
